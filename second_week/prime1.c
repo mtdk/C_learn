@@ -2,14 +2,26 @@
 
 int main()
 {
-	int i,n=0,m=0,sum_prime=0,j=0;
-	int prime_flag =1;
-	int count=0;
+	int n = 0;
+	int m = 0;
+	// 外循环变量 
+	int i;
+	// 内循环变量 
+	int j;
+	// 素数和 
+	int sum_prime = 0;
+	// 标记是否为素数 
+	int prime_flag = 1;
+	// 素数个数 
+	int count = 0;
+	
+	// 输入两个数n和m，满足0<n<=m<=200 
 	do{
 		scanf("%d %d", &n,&m);
-	}while(n<0 && n>m && m>10);
+	}while(n<0 && n>m && m>200);
 	
-	for(i=2;i<=10;i++){
+	
+	for(i=2;i<=200;i++){
 		prime_flag=1;
 		for(j=2;j<i;j++){
 			if(i%j==0){
