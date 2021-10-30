@@ -9,32 +9,33 @@ int main()
 	int n;
 	int m;
 	
-	scanf("%d", &n);
-	scanf("%d", &m);
-	if(n > 0 && n < m && m < 200){
-			// 遍历m个素数 
-		while(count < m){
-			// 判断是否为素数
-			flag = 1;
-			int i;
-			for(i = 2; i < x; i++){
-				if(x % i == 0){
-					flag = 0;
-					break;
+	scanf("%d %d", &n, &m);
+	if(n > 0){
+		if(n <= m){
+			if(m <= 200){
+				// 遍历m个素数 
+				while(count < m){
+					// 判断是否为素数
+					flag = 1;
+					int i;
+					for(i = n; i < x; i++){
+						if(x % i == 0){
+							flag = 0;
+							break;
+						}
+					}
+					if(flag){
+						count++;
+						// 如果是第n个素数则开始进行求和相加 
+						if(count >= n){
+							sum += x;
+						}
+					}
+					x++;
 				}
 			}
-			if(flag){
-				printf("%d\n", x);
-				count++;
-				// 如果是第n个素数则开始进行求和相加 
-				if(count >= n){
-					sum += x;
-				}
-			}
-			x++;
 		}
 	}
-	
 	printf("%d", sum);
 	
 	return 0;
