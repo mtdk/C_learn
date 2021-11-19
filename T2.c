@@ -10,7 +10,8 @@ int main()
 	(y==2||y==n-1)判断是否为第二列或者倒数第二列（是就输出B，否则输出A） 
 */	
 	int x,y,n;
-	scanf("%d",&n);
+//	scanf("%d",&n);
+n=5;
 	if(n>=1 && n<=20){	
 		for(x=1;x<=n;x++){
 			for(y=1;y<=n;y++){
